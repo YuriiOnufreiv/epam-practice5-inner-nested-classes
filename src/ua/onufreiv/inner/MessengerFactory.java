@@ -45,11 +45,10 @@ public class MessengerFactory {
      * @return new instance of {@link IMessenger} class
      */
     public IMessenger getConsoleMessengerAnonymous(String name) {
-        String nameLocalVar = name;
         return new IMessenger() {
             @Override
             public void printMessage(String message) {
-                System.out.println(nameLocalVar + " (anonymous) -> " + message);
+                System.out.println(name + " (anonymous) -> " + message);
             }
         };
     }

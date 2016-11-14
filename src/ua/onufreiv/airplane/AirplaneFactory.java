@@ -11,13 +11,13 @@ package ua.onufreiv.airplane;
  */
 public class AirplaneFactory {
     /**
-     * Creates the new object of {@link Airplane} class with the specified vendor and model
-     * @param vendor
-     * @param model
-     * @return
+     * Creates the new object of {@link Airplane} class with the specified manufacturer and model
+     * @param manufacturer manufacturer of the airplane
+     * @param model model of the airplane
+     * @return new airplane object
      */
-    public static Airplane createAirplane(String vendor, String model) {
-        Airplane airplane = new Airplane(vendor, model);
+    public static Airplane createAirplane(String manufacturer, String model) {
+        Airplane airplane = new Airplane(manufacturer, model);
         airplane.setLeftEngine(airplane.new AirplaneEngine(EngineType.LEFT));
         airplane.setRightEngine(airplane.new AirplaneEngine(EngineType.RIGHT));
         return airplane;

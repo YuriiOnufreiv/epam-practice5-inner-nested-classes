@@ -47,13 +47,13 @@ public class Airplane {
         }
     }
 
-    private String vendor;
+    private String manufacturer;
     private String model;
     private AirplaneEngine leftEngine;
     private AirplaneEngine rightEngine;
 
-    public Airplane(String vendor, String model) {
-        this.vendor = vendor;
+    public Airplane(String manufacturer, String model) {
+        this.manufacturer = manufacturer;
         this.model = model;
     }
 
@@ -66,19 +66,19 @@ public class Airplane {
     }
 
     public void startFly() {
-        System.out.println("===== STARTING FLY =====");
+        System.out.println("STARTING FLY");
         rightEngine.startEngine();
         leftEngine.startEngine();
     }
 
     public void endFly() {
-        System.out.println("=====  ENDING FLY  =====");
+        System.out.println("ENDING FLY");
         rightEngine.stopEngine();
         leftEngine.stopEngine();
     }
 
     @Override
     public String toString() {
-        return vendor + " " + model;
+        return manufacturer + " " + model;
     }
 }
